@@ -27,6 +27,7 @@
         LocationWhenInUse,
         NetworkState,
         Vibrate,
-        LaunchApp
+        LaunchApp,
+        Maps,
     }
 }
