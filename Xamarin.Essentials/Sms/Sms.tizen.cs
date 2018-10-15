@@ -24,7 +24,6 @@ namespace Xamarin.Essentials
                 appControl.Uri += string.Join(" ", message.Recipients);
 
             AppControl.SendLaunchRequest(appControl);
-
             return Task.CompletedTask;
         }
     }

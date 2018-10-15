@@ -31,7 +31,6 @@ namespace Xamarin.Essentials
                 appControl.Operation = AppControlOperations.Dial;
 
             AppControl.SendLaunchRequest(appControl);
-
             return Task.CompletedTask;
         }
     }

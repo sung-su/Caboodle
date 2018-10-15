@@ -19,7 +19,6 @@ namespace Xamarin.Essentials
             appControl.Uri += $"{latitude.ToString(CultureInfo.InvariantCulture)},{longitude.ToString(CultureInfo.InvariantCulture)}";
 
             AppControl.SendLaunchRequest(appControl);
-
             return Task.CompletedTask;
         }
 
@@ -37,7 +36,6 @@ namespace Xamarin.Essentials
             appControl.Uri += $"0,0?q={placemark.Thoroughfare} {placemark.Locality} {placemark.AdminArea} {placemark.PostalCode} {placemark.CountryName}";
 
             AppControl.SendLaunchRequest(appControl);
-
             return Task.CompletedTask;
         }
     }

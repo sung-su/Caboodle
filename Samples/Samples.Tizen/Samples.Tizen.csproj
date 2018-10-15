@@ -11,6 +11,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>None</DebugType>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="res\tizen_style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\tizen_style.css" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0" ExcludeAssets="Runtime" />

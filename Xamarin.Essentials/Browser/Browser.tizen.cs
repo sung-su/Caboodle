@@ -21,10 +21,8 @@ namespace Xamarin.Essentials
             };
 
             var hasMatches = AppControl.GetMatchedApplicationIds(appControl).Any();
-
             if (hasMatches)
                 AppControl.SendLaunchRequest(appControl);
-
             return Task.FromResult(hasMatches);
         }
     }

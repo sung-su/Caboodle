@@ -8,15 +8,14 @@
         <viewmodels:ConnectivityViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Easily detect connectivity state." FontAttributes="Bold" Margin="12" />
+    <ScrollView>
+        <StackLayout Padding="12,6,12,12" Spacing="6">
+            <Label Text="Easily detect connectivity state." FontAttributes="Bold" Margin="12" />
 
-        <ScrollView>
-            <StackLayout Padding="12,6,12,12" Spacing="6">
-                <Label Text="Connectivity State:" FontAttributes="Bold" />
-                <Label Text="{Binding NetworkAccess, StringFormat='NetworkAccess: {0}'}" />
-                <Label Text="{Binding Profiles, StringFormat='Profiles: {0}'}" />
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+            <Label Text="Connectivity State:" FontAttributes="Bold" />
+            <Label Text="{Binding NetworkAccess, StringFormat='NetworkAccess: {0}'}" />
+            <Label Text="{Binding Profiles, StringFormat='Profiles: {0}'}" />
+        </StackLayout>
+    </ScrollView>
+
 </views:BasePage>

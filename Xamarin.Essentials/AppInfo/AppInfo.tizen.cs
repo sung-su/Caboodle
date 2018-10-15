@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using Tizen.Applications;
 
 namespace Xamarin.Essentials
@@ -20,7 +21,7 @@ namespace Xamarin.Essentials
         static void PlatformOpenSettings()
         {
             Permissions.EnsureDeclared(PermissionType.LaunchApp);
-            AppControl.SendLaunchRequest(new AppControl() { Operation = AppControlOperations.Setting });
+            AppControl.SendLaunchRequest(new AppControl { Operation = AppControlOperations.Setting });
         }
     }
 }

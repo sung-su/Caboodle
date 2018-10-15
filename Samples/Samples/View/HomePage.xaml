@@ -2,23 +2,19 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:views="clr-namespace:Samples.View"
                 xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms"
                 x:Class="Samples.View.HomePage"
                 Title="Xamarin.Essentials">
     <views:BasePage.BindingContext>
         <viewmodels:HomeViewModel />
     </views:BasePage.BindingContext>
-    <StackLayout>
 
+        <StackLayout>
         <ListView ItemsSource="{Binding FilteredItems}"
                   HasUnevenRows="true"
                   ItemTapped="OnSampleTapped"
                   CachingStrategy="RecycleElement"
                   VerticalOptions="FillAndExpand">
-
-            <ListView.Header>
-                <SearchBar Placeholder="Filter samples..." Text="{Binding FilterText}" />
-            </ListView.Header>
-
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -28,7 +24,7 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="48" />
+                                <ColumnDefinition Width="90" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
@@ -47,8 +43,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
-
     </StackLayout>
 </views:BasePage>

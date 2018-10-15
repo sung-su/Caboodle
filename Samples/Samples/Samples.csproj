@@ -19,12 +19,83 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.637273" />
+    <PackageReference Include="Tizen.TV.UIControls" Version="1.0.0-beta-00003" />
+    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Xamarin.Essentials\Xamarin.Essentials.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\Circle\CircleBrowserPage.xaml.cs">
+      <DependentUpon>CircleBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleBatteryPage.xaml.cs">
+      <DependentUpon>CircleBatteryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleAppInfoPage.xaml.cs">
+      <DependentUpon>CircleAppInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleBarometerPage.xaml.cs">
+      <DependentUpon>CircleBarometerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleAccelerometerPage.xaml.cs">
+      <DependentUpon>CircleAccelerometerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleAllSensorsPage.xaml.cs">
+      <DependentUpon>CircleAllSensorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleCompassPage.xaml.cs">
+      <DependentUpon>CircleCompassPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleConnectivityPage.xaml.cs">
+      <DependentUpon>CircleConnectivityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleDataTransferPage.xaml.cs">
+      <DependentUpon>CircleDataTransferPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleDeviceInfoPage.xaml.cs">
+      <DependentUpon>CircleDeviceInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleEmailPage.xaml.cs">
+      <DependentUpon>CircleEmailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleFileSystemPage.xaml.cs">
+      <DependentUpon>CircleFileSystemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleGyroscopePage.xaml.cs">
+      <DependentUpon>CircleGyroscopePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleLauncherPage.xaml.cs">
+      <DependentUpon>CircleLauncherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleMagnetometerPage.xaml.cs">
+      <DependentUpon>CircleMagnetometerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleOrientationSensorPage.xaml.cs">
+      <DependentUpon>CircleOrientationSensorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CirclePhoneDialerPage.xaml.cs">
+      <DependentUpon>CirclePhoneDialerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CirclePreferencesPage.xaml.cs">
+      <DependentUpon>CirclePreferencesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleSecureStoragePage.xaml.cs">
+      <DependentUpon>CircleSecureStoragePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleSMSPage.xaml.cs">
+      <DependentUpon>CircleSMSPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\CircleTextToSpeechPage.xaml.cs">
+      <DependentUpon>CircleTextToSpeechPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Circle\VibrationPage.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)..\..\CodeStyles.targets" />

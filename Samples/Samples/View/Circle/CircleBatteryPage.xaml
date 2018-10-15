@@ -1,0 +1,24 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleBatteryPage"
+                Title="Battery"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}" >
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:BatteryViewModel/>
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout Padding="12,0,12,12" Spacing="6">
+            <Label Text="Easily detect battery level, source, and state." FontAttributes="Bold" Margin="12" />
+            <Label Text="Battery State:" FontAttributes="Bold" Margin="0,6,0,0" />
+            <Label Text="{Binding Level, StringFormat='Charge Level: {0:P1}'}" />
+            <Label Text="{Binding State, StringFormat='State: {0}'}" />
+            <Label Text="{Binding PowerSource, StringFormat='Power Source: {0}'}" />
+            <Label Text="{Binding EnergySaverStatus, StringFormat='Energy Saver: {0}'}" />
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>

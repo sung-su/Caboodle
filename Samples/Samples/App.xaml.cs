@@ -14,8 +14,10 @@ namespace Samples
             InitializeComponent();
 
             VersionTracking.Track();
-
-            MainPage = new NavigationPage(new HomePage());
+            if (Device.Idiom == TargetIdiom.Watch)
+                MainPage = new NavigationPage(new CircleHomePage());
+            else
+                MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()

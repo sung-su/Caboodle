@@ -30,7 +30,6 @@ namespace Xamarin.Essentials
                 appControl.ExtraData.Add("http://tizen.org/appcontrol/data/to", message.To);
 
             AppControl.SendLaunchRequest(appControl);
-
             return Task.CompletedTask;
         }
     }

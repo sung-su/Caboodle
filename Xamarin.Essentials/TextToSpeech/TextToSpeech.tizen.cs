@@ -44,6 +44,7 @@ namespace Xamarin.Essentials
             var speed = 0;
             if (settings?.Pitch.HasValue ?? false)
                 speed = (int)settings.Pitch.Value;
+
             tts.AddText(text, language, (int)voiceType, speed);
             tts.Play();
 

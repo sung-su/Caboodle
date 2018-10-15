@@ -1,0 +1,33 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleBrowserPage"
+                Title="Browser"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleListView}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:BrowserViewModel/>
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout Padding="12,0,12,12" Spacing="6">
+            <Label Text="Quickly and easily open URIs." FontAttributes="Bold" Margin="12" />
+
+            <Label Text="Enter URI:" />
+            <Entry Placeholder="https://..." Text="{Binding Uri}" />
+
+            <Button Text="Open URI"
+                    Command="{Binding OpenUriCommand}"
+                    IsEnabled="{Binding IsNotBusy}" />
+
+            <Label Text="Browser Launch Type:" />
+            <Picker HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding BrowserLaunchModes}"
+                    SelectedIndex="{Binding BrowserType, Mode=TwoWay}" />
+
+            <Label Text="{Binding BrowserStatus}" />
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>

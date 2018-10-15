@@ -8,10 +8,9 @@
         <viewmodels:BarometerViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Monitor barometer for changes." FontAttributes="Bold" Margin="12" />
-
-        <ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Monitor barometer for changes." FontAttributes="Bold" Margin="12" />
             <Grid Padding="12,0,12,12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -42,7 +41,7 @@
                 <Button Grid.Row="3"  Grid.Column="1" Text="Stop" Command="{Binding StopCommand}"
                         IsEnabled="{Binding IsActive}" />
             </Grid>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>
