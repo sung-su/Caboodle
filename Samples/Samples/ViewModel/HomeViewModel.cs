@@ -3,6 +3,7 @@ using System.Linq;
 using Samples.Model;
 using Samples.View;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Samples.ViewModel
 {
@@ -16,8 +17,148 @@ namespace Samples.ViewModel
         public HomeViewModel()
         {
             alreadyAppeared = false;
-            samples = new SampleItem[]
+            if (Device.Idiom == TargetIdiom.TV)
             {
+                samples = new SampleItem[]
+                {
+                new SampleItem(
+                    "📦",
+                    "App Info",
+                    typeof(AppInfoPage),
+                    "Find out about the app with ease.",
+                    new[] { "app", "info" }),
+                new SampleItem(
+                    "📶",
+                    "Connectivity",
+                    typeof(ConnectivityPage),
+                    "Check connectivity state and detect changes.",
+                    new[] { "connectivity", "internet", "wifi" }),
+                new SampleItem(
+                    "📱",
+                    "Device Info",
+                    typeof(DeviceInfoPage),
+                    "Find out about the device with ease.",
+                    new[] { "hardware", "device", "info", "screen", "display", "orientation", "rotation" }),
+                new SampleItem(
+                    "📁",
+                    "File System",
+                    typeof(FileSystemPage),
+                    "Easily save files to app data.",
+                    new[] { "files", "directory", "filesystem", "storage" }),
+                new SampleItem(
+                    "📍",
+                    "Geocoding",
+                    typeof(GeocodingPage),
+                    "Easily geocode and reverse geocoding.",
+                    new[] { "geocoding", "geolocation", "position", "address", "mapping" }),
+                new SampleItem(
+                    "📍",
+                    "Geolocation",
+                    typeof(GeolocationPage),
+                    "Quickly get the current location.",
+                    new[] { "geolocation", "position", "address", "mapping" }),
+                new SampleItem(
+                    "⚙️",
+                    "Preferences",
+                    typeof(PreferencesPage),
+                    "Quickly and easily add persistent preferences.",
+                    new[] { "settings", "preferences", "prefs", "storage" }),
+                new SampleItem(
+                    "🔒",
+                    "Secure Storage",
+                    typeof(SecureStoragePage),
+                    "Securely store data.",
+                    new[] { "settings", "preferences", "prefs", "security", "storage" }),
+                new SampleItem(
+                    "🔊",
+                    "Text To Speech",
+                    typeof(TextToSpeechPage),
+                    "Vocalize text on the device.",
+                    new[] { "text", "message", "speech", "communication" }),
+                };
+            }
+            else if (Device.Idiom == TargetIdiom.Watch)
+            {
+                samples = new SampleItem[]
+                {
+                new SampleItem(
+                    "📏",
+                    "All Sensors",
+                    typeof(AllSensorsPage),
+                    "Have a look at the all kind of device sensors.",
+                    new[] { "accelerometer", "barometer", "compass", "gyroscope", "magnetometer", "orientation", "sensors", "hardware", "device" }),
+                new SampleItem(
+                    "📦",
+                    "App Info",
+                    typeof(AppInfoPage),
+                    "Find out about the app with ease.",
+                    new[] { "app", "info" }),
+                new SampleItem(
+                    "🔋",
+                    "Battery",
+                    typeof(BatteryPage),
+                    "Easily detect battery level, source, and state.",
+                    new[] { "battery", "hardware", "device" }),
+                new SampleItem(
+                    "📶",
+                    "Connectivity",
+                    typeof(ConnectivityPage),
+                    "Check connectivity state and detect changes.",
+                    new[] { "connectivity", "internet", "wifi" }),
+                new SampleItem(
+                    "📱",
+                    "Device Info",
+                    typeof(DeviceInfoPage),
+                    "Find out about the device with ease.",
+                    new[] { "hardware", "device", "info", "screen", "display", "orientation", "rotation" }),
+                new SampleItem(
+                    "📁",
+                    "File System",
+                    typeof(FileSystemPage),
+                    "Easily save files to app data.",
+                    new[] { "files", "directory", "filesystem", "storage" }),
+                new SampleItem(
+                    "📞",
+                    "Phone Dialer",
+                    typeof(PhoneDialerPage),
+                    "Easily open the phone dialer.",
+                    new[] { "phone", "dialer", "communication", "call" }),
+                new SampleItem(
+                    "⚙️",
+                    "Preferences",
+                    typeof(PreferencesPage),
+                    "Quickly and easily add persistent preferences.",
+                    new[] { "settings", "preferences", "prefs", "storage" }),
+                new SampleItem(
+                    "🔒",
+                    "Secure Storage",
+                    typeof(SecureStoragePage),
+                    "Securely store data.",
+                    new[] { "settings", "preferences", "prefs", "security", "storage" }),
+                new SampleItem(
+                    "💬",
+                    "SMS",
+                    typeof(SMSPage),
+                    "Easily send SMS messages.",
+                    new[] { "sms", "message", "text", "communication", "share" }),
+                new SampleItem(
+                    "🔊",
+                    "Text To Speech",
+                    typeof(TextToSpeechPage),
+                    "Vocalize text on the device.",
+                    new[] { "text", "message", "speech", "communication" }),
+                new SampleItem(
+                    "📳",
+                    "Vibration",
+                    typeof(VibrationPage),
+                    "Quickly and easily make the device vibrate.",
+                    new[] { "vibration", "vibrate", "hardware", "device" }),
+                };
+            }
+            else
+            {
+                samples = new SampleItem[]
+                {
                 new SampleItem(
                     "📏",
                     "Accelerometer",
@@ -54,12 +195,14 @@ namespace Samples.ViewModel
                     typeof(BrowserPage),
                     "Quickly and easily open a browser to a specific website.",
                     new[] { "browser", "web", "internet" }),
+                /*
                 new SampleItem(
                     "📋",
                     "Clipboard",
                     typeof(ClipboardPage),
                     "Quickly and easily use the clipboard.",
                     new[] { "clipboard", "copy", "paste" }),
+                    */
                 new SampleItem(
                     "📏",
                     "Compass",
@@ -156,12 +299,14 @@ namespace Samples.ViewModel
                     typeof(PreferencesPage),
                     "Quickly and easily add persistent preferences.",
                     new[] { "settings", "preferences", "prefs", "storage" }),
+                /*
                 new SampleItem(
                     "💤",
                     "Screen Lock",
                     typeof(ScreenLockPage),
                     "Keep the device screen awake.",
                     new[] { "screen", "awake", "sleep" }),
+                    */
                 new SampleItem(
                     "🔒",
                     "Secure Storage",
@@ -186,7 +331,8 @@ namespace Samples.ViewModel
                     typeof(VibrationPage),
                     "Quickly and easily make the device vibrate.",
                     new[] { "vibration", "vibrate", "hardware", "device" }),
-            };
+                };
+            }
             filteredItems = samples;
             filterText = string.Empty;
         }

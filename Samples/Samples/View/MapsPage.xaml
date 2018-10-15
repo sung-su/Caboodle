@@ -19,8 +19,6 @@
                         SelectedIndex="{Binding DirectionMode, Mode=TwoWay}" />
             <Label Text="Name"/>
             <Entry Text="{Binding Name}"/>
-                
-                
 
             <Label Text="Latitude" Margin="0,24,0,0" />
             <Entry Keyboard="Numeric" Text="{Binding Latitude}" />

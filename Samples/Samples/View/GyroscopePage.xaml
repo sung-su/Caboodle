@@ -8,10 +8,10 @@
         <viewmodels:GyroscopeViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Retrieve rotation around the device's three primary axes." FontAttributes="Bold" Margin="12" />
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Retrieve rotation around the device's three primary axes." FontAttributes="Bold" Margin="12" />
 
-        <ScrollView>
             <Grid Padding="12,0,12,12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -41,7 +41,8 @@
                 <Button Grid.Row="5" Grid.Column="1" Text="Stop" Command="{Binding StopCommand}"
                     IsEnabled="{Binding IsActive}" />
             </Grid>
-        </ScrollView>
-    </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>

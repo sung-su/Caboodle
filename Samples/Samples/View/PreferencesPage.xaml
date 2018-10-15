@@ -8,15 +8,14 @@
         <viewmodels:PreferencesViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Quickly and easily add persistent preferences." FontAttributes="Bold" Margin="12" />
-
-        <ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Quickly and easily add persistent preferences." FontAttributes="Bold" Margin="12" />
             <StackLayout Padding="12,0,12,12" Spacing="6">
                 <Label Text="Enter some text to save:" />
                 <Entry Placeholder="Enter text..." Text="{Binding PreferenceValue}" />
             </StackLayout>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>

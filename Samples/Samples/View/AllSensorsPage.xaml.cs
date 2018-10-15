@@ -1,8 +1,4 @@
-﻿using System.Threading.Tasks;
-using Samples.ViewModel;
-using Xamarin.Forms;
-
-namespace Samples.View
+﻿namespace Samples.View
 {
     public partial class AllSensorsPage : BasePage
     {

@@ -8,10 +8,9 @@
         <viewmodels:AccelerometerViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Retrieve acceleration data of the device in 3D space." FontAttributes="Bold" Margin="12" />
-
-        <ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Retrieve acceleration data of the device in 3D space." FontAttributes="Bold" Margin="12" />
             <Grid Padding="12,0,12,12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -41,7 +40,7 @@
                 <Button Grid.Row="5" Grid.Column="1" Text="Stop" Command="{Binding StopCommand}"
                     IsEnabled="{Binding IsActive}" />
             </Grid>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>

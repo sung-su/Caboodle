@@ -7,10 +7,10 @@
     <views:BasePage.BindingContext>
         <viewmodels:LauncherViewModel />
     </views:BasePage.BindingContext>
-    <StackLayout>
-        <Label Text="Check if Uri is launchable and launch it." FontAttributes="Bold" Margin="12" />
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Check if Uri is launchable and launch it." FontAttributes="Bold" Margin="12" />
 
-        <ScrollView>
             <Grid Padding="12,0,12,12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -26,6 +26,6 @@
                 <Button Grid.Row="2" Grid.Column="0" Text="Launch Browser" Command="{Binding LaunchBrowserCommand}"/>
                 <Button Grid.Row="2" Grid.Column="1" Text="Launch Mail" Command="{Binding LaunchMailCommand}"/>
             </Grid>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </views:BasePage>

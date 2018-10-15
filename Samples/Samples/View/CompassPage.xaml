@@ -8,16 +8,16 @@
         <viewmodels:CompassViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Monitor compass for changes." FontAttributes="Bold" Margin="12" />
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Monitor compass for changes." FontAttributes="Bold" Margin="12" />
 
-        <Switch IsToggled="{Binding CompassApplyLowPassFilter}" >
-            <Switch.IsVisible>
-                <OnPlatform x:TypeArguments="x:Boolean" Android="True" Default="False"/>
-            </Switch.IsVisible>
-        </Switch>
+            <Switch IsToggled="{Binding CompassApplyLowPassFilter}" >
+                <Switch.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean" Android="True" Default="False"/>
+                </Switch.IsVisible>
+            </Switch>
 
-        <ScrollView>
             <Grid Padding="12,0,12,12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -61,7 +61,7 @@
                 <Button Grid.Row="5" Grid.Column="1" Text="Stop" Command="{Binding StopCompass2Command}"
                         IsEnabled="{Binding Compass2IsActive}" />
             </Grid>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>

@@ -8,21 +8,19 @@
         <viewmodels:SmsViewModel />
     </views:BasePage.BindingContext>
 
-    <StackLayout>
-        <Label Text="Easily send SMS messages." FontAttributes="Bold" Margin="12" />
+    <ScrollView>
+        <StackLayout Padding="12,0,12,12" Spacing="6">
+            <Label Text="Easily send SMS messages." FontAttributes="Bold" Margin="12" />
 
-        <ScrollView>
-            <StackLayout Padding="12,0,12,12" Spacing="6">
-                <Label Text="Recipents (optional, separate multiple with ',' or '*'):" />
-                <Entry Text="{Binding Recipient}" Keyboard="Telephone" />
-                <Label Text="Message Text (optional):" />
-                <Entry Text="{Binding MessageText}" />
+            <Label Text="Recipents (optional, separate multiple with ',' or '*'):" />
+            <Entry Text="{Binding Recipient}" Keyboard="Telephone" />
+            <Label Text="Message Text (optional):" />
+            <Entry Text="{Binding MessageText}" />
 
-                <Button Text="Send SMS" Command="{Binding SendSmsCommand}" />
+            <Button Text="Send SMS" Command="{Binding SendSmsCommand}" />
 
-                <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+        </StackLayout>
+    </ScrollView>
 
 </views:BasePage>

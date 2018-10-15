@@ -5,12 +5,9 @@
              x:Class="Samples.View.AllSensorsPage"
              Title="All Sensors">
 
-    <StackLayout>
-        <Label Text="Have a look at the accelerometer, compass, gyroscope and magnetometer." FontAttributes="Bold" Margin="12" />
-
         <ScrollView>
             <StackLayout Padding="12,0,12,12" Spacing="6">
-
+                <Label Text="Have a look at the accelerometer, compass, gyroscope and magnetometer." FontAttributes="Bold" Margin="12" />
                 <Label Text="Accelerometer" FontAttributes="Bold" Margin="0,6,0,0" />
                 <Grid x:Name="GridAccelerometer">
                     <Grid.BindingContext>
@@ -176,8 +173,9 @@
                     <Button Grid.Row="5" Grid.Column="1" Text="Stop" Command="{Binding StopCommand}"
                             IsEnabled="{Binding IsActive}" />
                 </Grid>
+
                 <Label Text="Monitor barometer for changes." FontAttributes="Bold" Margin="12" />
-                <Grid  x:Name="GridBarometer">
+                <Grid x:Name="GridBarometer">
                     <Grid.BindingContext>
                         <viewmodels:BarometerViewModel />
                     </Grid.BindingContext>
@@ -189,18 +187,16 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-
                     <Label Grid.Row="0" Grid.ColumnSpan="2"
-                       Text="{Binding BaromterValue, StringFormat='Barometer pressure (hPA): {0:N}'}" />
+                        Text="{Binding Pressure,StringFormat='Barometer pressure (hPA): {0:N}'}" />
 
-                    <Button Grid.Row="1" Grid.Column="0" Text="Start" Command="{Binding StartBarometerComand}"
-                        IsEnabled="{Binding BarometerIsActive, Converter={StaticResource NegativeConverter}}" />
+                    <Button Grid.Row="1" Grid.Column="0" Text="Start" Command="{Binding StartCommand}"
+                        IsEnabled="{Binding IsActive, Converter={StaticResource NegativeConverter}}" />
 
-                    <Button Grid.Row="1"  Grid.Column="1" Text="Stop" Command="{Binding StopBarometerCommand}"
-                        IsEnabled="{Binding BarometerIsActive}" />
+                    <Button Grid.Row="1"  Grid.Column="1" Text="Stop" Command="{Binding StopCommand}"
+                        IsEnabled="{Binding IsActive}" />
                 </Grid>
+
             </StackLayout>
         </ScrollView>
-    </StackLayout>
-
 </views:BasePage>

@@ -1,0 +1,68 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Essentials", "Xamarin.Essentials\Xamarin.Essentials.csproj", "{2564C055-4B5D-469A-8C01-A9566BB3B9A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{30E17A2D-B23A-429D-9AC1-87E953D561AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples\Samples.csproj", "{5CF134FC-5094-4F28-8ED9-A7C616F90D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tizen", "Samples\Samples.Tizen\Samples.Tizen.csproj", "{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|x64.ActiveCfg = Debug|x64
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|x64.Build.0 = Debug|x64
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|x86.ActiveCfg = Debug|x86
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Debug|x86.Build.0 = Debug|x86
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|x64.ActiveCfg = Release|x64
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|x64.Build.0 = Release|x64
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|x86.ActiveCfg = Release|x86
+		{2564C055-4B5D-469A-8C01-A9566BB3B9A7}.Release|x86.Build.0 = Release|x86
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|x64.ActiveCfg = Debug|x64
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|x64.Build.0 = Debug|x64
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|x86.ActiveCfg = Debug|x86
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Debug|x86.Build.0 = Debug|x86
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|x64.ActiveCfg = Release|x64
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|x64.Build.0 = Release|x64
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|x86.ActiveCfg = Release|x86
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87}.Release|x86.Build.0 = Release|x86
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|x64.ActiveCfg = Debug|x64
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|x64.Build.0 = Debug|x64
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|x86.ActiveCfg = Debug|x86
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Debug|x86.Build.0 = Debug|x86
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|x64.ActiveCfg = Release|x64
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|x64.Build.0 = Release|x64
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|x86.ActiveCfg = Release|x86
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CF134FC-5094-4F28-8ED9-A7C616F90D87} = {30E17A2D-B23A-429D-9AC1-87E953D561AE}
+		{BB079DD2-9535-4C8C-A5C5-6A8B388499D1} = {30E17A2D-B23A-429D-9AC1-87E953D561AE}
+	EndGlobalSection
+EndGlobal
