@@ -3,3 +3,4 @@
 [assembly: InternalsVisibleTo("XamarinEssentialsDeviceTestsAndroid")]
 [assembly: InternalsVisibleTo("XamarinEssentialsDeviceTestsUWP")]
 [assembly: InternalsVisibleTo("XamarinEssentialsDeviceTestsiOS")]
+[assembly: InternalsVisibleTo("XamarinEssentialsDeviceTestsTizen")]

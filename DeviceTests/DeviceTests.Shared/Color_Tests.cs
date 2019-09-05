@@ -40,6 +40,8 @@ namespace DeviceTests
             var platform = UIKit.UIColor.FromRGBA(r, g, b, a);
 #elif __ANDROID__
             var platform = new Android.Graphics.Color(r, g, b, a);
+#elif TIZEN
+            var platform = ElmSharp.Color.FromRgba(r, g, b, a);
 #else
             var platform = Windows.UI.Color.FromArgb(a, r, g, b);
 #endif

@@ -27,6 +27,8 @@ namespace DeviceTests
             var platform = new CoreGraphics.CGPoint(x, y);
 #elif __ANDROID__
             var platform = new Android.Graphics.Point(x, y);
+#elif TIZEN
+            var platform = new ElmSharp.Point() { X = x, Y = y };
 #else
             var platform = new Windows.Foundation.Point(x, y);
 #endif
@@ -58,6 +60,8 @@ namespace DeviceTests
             var platform = system.ToPlatformPoint();
 #elif __ANDROID__
             var platform = system.ToPlatformPointF();
+#elif TIZEN
+            var platform = system.ToPlatformPointF();
 #else
             var platform = system.ToPlatformPoint();
 #endif
@@ -72,6 +76,8 @@ namespace DeviceTests
             var platform = new CoreGraphics.CGPoint(x, y);
 #elif __ANDROID__
             var platform = new Android.Graphics.PointF(x, y);
+#elif TIZEN
+            var platform = new ElmSharp.Point() { X = x, Y = y };
 #else
             var platform = new Windows.Foundation.Point(x, y);
 #endif

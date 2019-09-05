@@ -27,6 +27,8 @@ namespace DeviceTests
             var platform = new CoreGraphics.CGSize(width, height);
 #elif __ANDROID__
             var platform = new Android.Util.Size(width, height);
+#elif TIZEN
+            var platform = new ElmSharp.Size(width, height);
 #else
             var platform = new Windows.Foundation.Size(width, height);
 #endif
@@ -74,6 +76,9 @@ namespace DeviceTests
 #elif __ANDROID__
             var platform = new Android.Util.SizeF(width, height);
             var system = platform.ToSystemSizeF();
+#elif TIZEN
+            var platform = new ElmSharp.Size(width, height);
+            var system = platform.ToSystemSize();
 #else
             var platform = new Windows.Foundation.Size(width, height);
             var system = platform.ToSystemSize();

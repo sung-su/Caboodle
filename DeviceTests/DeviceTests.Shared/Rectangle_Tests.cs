@@ -40,6 +40,8 @@ namespace DeviceTests
             var platform = new CoreGraphics.CGRect(x, y, width, height);
 #elif __ANDROID__
             var platform = new Android.Graphics.Rect(x, y, x + width, y + height);
+#elif TIZEN
+            var platform = new ElmSharp.Rect(x, y, width, height);
 #else
             var platform = new Windows.Foundation.Rect(x, y, width, height);
 #endif
@@ -93,6 +95,8 @@ namespace DeviceTests
             var platform = new CoreGraphics.CGRect(x, y, width, height);
 #elif __ANDROID__
             var platform = new Android.Graphics.RectF(x, y, x + width, y + height);
+#elif TIZEN
+            var platform = new ElmSharp.Rect(x, y, width, height);
 #else
             var platform = new Windows.Foundation.Rect(x, y, width, height);
 #endif

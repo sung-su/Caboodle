@@ -12,6 +12,8 @@
 #elif WINDOWS_UWP
             // UWP does not emulate, and only some devices have, an accelerometer
             Windows.Devices.Sensors.Accelerometer.GetDefault() != null;
+#elif TIZEN
+            Tizen.Sensor.Accelerometer.IsSupported != false;
 #endif
 
         public static bool HasMagnetometer =>
@@ -24,6 +26,8 @@
 #elif WINDOWS_UWP
             // UWP does not emulate, and only some devices have, a magnetometer
             Windows.Devices.Sensors.Magnetometer.GetDefault() != null;
+#elif TIZEN
+            Tizen.Sensor.Magnetometer.IsSupported != false;
 #endif
 
         public static bool HasGyroscope =>
@@ -36,6 +40,8 @@
 #elif WINDOWS_UWP
             // UWP does not emulate, and only some devices have, a gyroscope
             Windows.Devices.Sensors.Gyrometer.GetDefault() != null;
+#elif TIZEN
+            Tizen.Sensor.Gyroscope.IsSupported != false;
 #endif
 
         public static bool HasCompass =>
@@ -48,6 +54,8 @@
 #elif WINDOWS_UWP
             // UWP does not emulate, and only some devices have, a compass
             Windows.Devices.Sensors.Compass.GetDefault() != null;
+#elif TIZEN
+            Tizen.Sensor.OrientationSensor.IsSupported != false;
 #endif
 
         public static bool HasBattery =>
@@ -61,6 +69,8 @@
             // UWP appears to emulate a battery
             // TODO: verify this
             true;
+#elif TIZEN
+            true;
 #endif
 
         public static bool HasFlash =>
@@ -73,6 +83,8 @@
 #elif WINDOWS_UWP
             // TODO: most UWP devices don't have a camera lamp (mobile devices do, we we don't care about those)
             false;
+#elif TIZEN
+            Xamarin.Essentials.Flashlight.IsSupported != false;
 #endif
 
         public static bool HasBarometer =>
@@ -84,6 +96,8 @@
 #elif WINDOWS_UWP
             // TODO: most UWP devices don't have a barometer (mobile devices do, we we don't care about those)
             false;
+#elif TIZEN
+            Tizen.Sensor.PressureSensor.IsSupported != false;
 #endif
     }
 }

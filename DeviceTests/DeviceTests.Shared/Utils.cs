@@ -101,6 +101,43 @@ namespace DeviceTests
             });
             return tcs.Task;
         }
+#elif TIZEN
+
+        public static Task OnMainThread(Action action)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            ElmSharp.EcoreMainloop.Post(() =>
+            {
+                try
+                {
+                    action();
+                    tcs.SetResult(true);
+                }
+                catch (Exception ex)
+                {
+                    tcs.SetException(ex);
+                }
+            });
+            return tcs.Task;
+        }
+
+        public static Task OnMainThread(Func<Task> action)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            ElmSharp.EcoreMainloop.Post(async () =>
+            {
+                try
+                {
+                    await action();
+                    tcs.SetResult(true);
+                }
+                catch (Exception ex)
+                {
+                    tcs.SetException(ex);
+                }
+            });
+            return tcs.Task;
+        }
 #endif
     }
 }
