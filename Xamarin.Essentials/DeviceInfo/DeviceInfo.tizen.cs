@@ -1,4 +1,7 @@
-﻿using Plat = Xamarin.Essentials.Platform;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Tizen.System;
+using Plat = Xamarin.Essentials.Platform;
 
 namespace Xamarin.Essentials
 {
@@ -48,6 +51,21 @@ namespace Xamarin.Essentials
                 return DeviceType.Virtual;
             else
                 return DeviceType.Unknown;
+        }
+
+        static Task<List<StorageInfo>> PlatformGetStorageInformation()
+        {
+            var list = new List<StorageInfo>();
+            var storages = StorageManager.Storages;
+            foreach (var storage in storages)
+            {
+                var capacity = storage.TotalSpace;
+                var free = storage.AvaliableSpace;
+                var used = capacity - free;
+                var type = storage.StorageType == StorageArea.Internal ? StorageType.Internal : StorageType.External;
+                list.Add(new StorageInfo(capacity, free, used, type));
+            }
+            return Task.FromResult(list);
         }
     }
 }
