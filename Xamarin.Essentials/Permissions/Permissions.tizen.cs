@@ -9,14 +9,10 @@ namespace Xamarin.Essentials
     {
         public static bool IsPrivilegeDeclared(string tizenPrivilege)
         {
-            var tizenPrivileges = tizenPrivilege;
-
-            if (tizenPrivileges == null || !tizenPrivileges.Any())
+            if (string.IsNullOrEmpty(tizenPrivilege))
                 return false;
 
-            var package = Platform.CurrentPackage;
-
-            if (!package.Privileges.Contains(tizenPrivilege))
+            if (!Platform.CurrentPackage.Privileges.Contains(tizenPrivilege))
                 return false;
 
             return true;
